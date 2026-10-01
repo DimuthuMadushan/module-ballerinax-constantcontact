@@ -52,6 +52,9 @@ public function main() returns error? {
         return error("The campaign has no email activities");
     }
     string activityId = activities[0]?.campaignActivityId ?: "";
+    if activityId == "" {
+        return error("The campaign activity ID was not returned by the API");
+    }
     constantcontact:EmailCampaignActivity activity = check cc->getEmailCampaignActivity(activityId);
     io:println("Activity subject: ", activity.subject, ", status: ", activity?.currentStatus ?: "");
 }

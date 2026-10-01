@@ -220,7 +220,11 @@ public isolated client class Client {
     remote isolated function importContactsCsv(ActivitiesContactsFileImportBody payload, map<string|string[]> headers = {}) returns ActivityImport|error {
         string resourcePath = string `/activities/contacts_file_import`;
         http:Request request = new;
-        mime:Entity[] bodyParts = check createBodyParts(check jsondata:toJson(payload).ensureType());
+        mime:Entity[] bodyParts = check createBodyParts({
+            "file": payload.file,
+            "sms_permission_to_send": payload.smsPermissionToSend,
+            "list_ids": payload.listIds
+        });
         request.setBodyParts(bodyParts);
         return self.clientEp->post(resourcePath, request, headers);
     }

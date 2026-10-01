@@ -140,6 +140,20 @@ These changes are done in order to improve the overall usability, and as workaro
 
    `listAutomations` documents a `209` response that `bal openapi --mode service` rejects. The mock-only copy of the spec maps it to `200`; the published spec is unchanged.
 
+6. **Generated client patched: multipart body of `importContactsCsv`**
+
+   The generated client converts the `ActivitiesContactsFileImportBody` payload to JSON before building the multipart body, so the CSV file was sent as a JSON text part (`{"fileContent":[101,...]}`) with no file name. `client.bal` was edited by hand to pass the form fields to `createBodyParts` directly:
+
+   ```ballerina
+   mime:Entity[] bodyParts = check createBodyParts({
+       "file": payload.file,
+       "sms_permission_to_send": payload.smsPermissionToSend,
+       "list_ids": payload.listIds
+   });
+   ```
+
+   `file` is now sent as a file part with its name, and the wire names `sms_permission_to_send` and `list_ids` are kept. When `smsPermissionToSend` is not set, no part is sent for it. This is a change to generated code, not to the spec, so it must be re-applied to `client.bal` whenever the client is regenerated.
+
 ## OpenAPI cli command
 
 The following command was used to generate the Ballerina client from the OpenAPI specification. The command should be executed from the repository root directory.

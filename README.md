@@ -20,7 +20,7 @@ To use the Constant Contact connector, you need an OAuth 2.0 access token for yo
 
 3. Copy the application's **API Key** (client ID) and create a **client secret**.
 
-4. Add a redirect URI for your application and select the scopes it needs, such as `contact_data`, `campaign_data` and `account_read`.
+4. Add a redirect URI for your application and select the scopes it needs, such as `contact_data`, `campaign_data` and `account_read`. If you configure the connector with a refresh token, also select the optional `offline_access` scope, which is required for a refresh token to be issued.
 
 5. Authorize the application using the OAuth 2.0 authorization code flow against `https://authz.constantcontact.com/oauth2/default/v1/authorize`, then exchange the code at `https://authz.constantcontact.com/oauth2/default/v1/token`.
 

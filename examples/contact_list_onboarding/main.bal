@@ -12,8 +12,9 @@ configurable string contactLastName = ?;
 public function main() returns error? {
     constantcontact:Client cc = check new ({auth: {token: accessToken}});
 
-    // Step 1: Reuse the list if it already exists, otherwise create it.
-    constantcontact:ContactListArray existing = check cc->listLists();
+    // Step 1: Reuse the list if it already exists, otherwise create it. Filtering by name
+    // server-side finds the list without paging through every list in the account.
+    constantcontact:ContactListArray existing = check cc->listLists(name = listName);
     constantcontact:ContactList[] lists = existing?.lists ?: [];
     string? listId = ();
     foreach constantcontact:ContactList l in lists {
