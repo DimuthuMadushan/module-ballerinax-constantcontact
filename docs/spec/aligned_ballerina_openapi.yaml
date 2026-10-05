@@ -8073,11 +8073,11 @@ paths:
         explode: true
         schema:
           type: string
-          default: all
           enum:
           - all
           - managed
           - unmanaged
+          default: all
         example: managed
         x-ballerina-name: accountType
       responses:
@@ -19931,8 +19931,8 @@ components:
             v3api/general.partner: Access to general partner API methods
     api_key:
       type: apiKey
+      description: API key issued for the application, sent in the x-api-key header
       name: x-api-key
       in: header
       x-ballerina-name: xApiKey
-      description: API key issued for the application, sent in the x-api-key header
 x-original-swagger-version: '2.0'

@@ -87,7 +87,7 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Request successful."
+          description: The privileges granted to the user
           schema:
             $ref: "#/definitions/UserPrivilegesResource"
         "401":
@@ -128,7 +128,7 @@ paths:
         x-example: "company_logo"
       responses:
         "200":
-          description: "Request successful"
+          description: The account summary details
           schema:
             $ref: "#/definitions/Customer"
         "400":
@@ -176,7 +176,7 @@ paths:
           $ref: "#/definitions/CustomerPut"
       responses:
         "200":
-          description: "Request successful"
+          description: The updated account details
           schema:
             $ref: "#/definitions/CustomerPut"
         "400":
@@ -213,7 +213,7 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Request successful"
+          description: The physical address for the account
           schema:
             $ref: "#/definitions/AccountPhysicalAddress"
         "400":
@@ -265,7 +265,7 @@ paths:
           $ref: "#/definitions/AccountPhysicalAddress"
       responses:
         "201":
-          description: "Request successful"
+          description: The created physical address
           schema:
             $ref: "#/definitions/AccountPhysicalAddress"
         "400":
@@ -325,7 +325,7 @@ paths:
           $ref: "#/definitions/AccountPhysicalAddress"
       responses:
         "200":
-          description: "Request successful"
+          description: The updated physical address
           schema:
             $ref: "#/definitions/AccountPhysicalAddress"
         "400":
@@ -365,7 +365,7 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Request successful"
+          description: The company logo for the account
           schema:
             $ref: "#/definitions/CompanyLogo"
         "204":
@@ -415,7 +415,7 @@ paths:
           $ref: "#/definitions/CompanyLogo"
       responses:
         "200":
-          description: "Request successful"
+          description: The updated company logo
           schema:
             $ref: "#/definitions/CompanyLogo"
         "400":
@@ -458,10 +458,7 @@ paths:
       parameters:
       - name: "confirm_status"
         in: "query"
-        description: "Use the `confirm_status` query parameter to search for account\
-          \ emails using the email status. Possible values are `CONFIRMED` or `UNCONFIRMED`.\
-          \ You can also abbreviate the values of this query parameter and use `C`\
-          \ or `U`.\n"
+        description: "Use the `confirm_status` query parameter to search for account emails using the email status. Possible values are `CONFIRMED` or `UNCONFIRMED`. You can also abbreviate the values of this query parameter and use `C` or `U`.\n"
         required: false
         type: "string"
         enum:
@@ -497,7 +494,7 @@ paths:
         type: "string"
       responses:
         "200":
-          description: "Request successful."
+          description: The account email addresses
           schema:
             $ref: "#/definitions/AccountEmails"
         "400":
@@ -549,7 +546,7 @@ paths:
           $ref: "#/definitions/AccountEmailInput"
       responses:
         "201":
-          description: "Request successful."
+          description: The added account email address
           schema:
             $ref: "#/definitions/AccountEmailCreateResponse"
         "400":
@@ -618,7 +615,7 @@ paths:
         x-example: "processing"
       responses:
         "200":
-          description: "Request Successful"
+          description: The collection of activity statuses
           schema:
             $ref: "#/definitions/Activities"
         "400":
@@ -663,7 +660,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "200":
-          description: "Request Successful"
+          description: The status of the activity
           schema:
             $ref: "#/definitions/Activity"
         "400":
@@ -713,7 +710,7 @@ paths:
           $ref: "#/definitions/ContactsExport"
       responses:
         "201":
-          description: "Request successful, queued for processing."
+          description: The contact export activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityExportStatus"
         "400":
@@ -764,7 +761,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "200":
-          description: "Request Successful"
+          description: The exported contacts file
           schema:
             $ref: "#/definitions/ActivityGetExport"
         "400":
@@ -819,7 +816,7 @@ paths:
           $ref: "#/definitions/ContactDelete"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The bulk contact delete activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityDeleteStatus"
         "400":
@@ -893,7 +890,6 @@ paths:
           \ custom fields."
         required: true
         type: "file"
-        x-example: "new_contacts_import.csv"
       - name: "list_ids"
         in: "formData"
         description: "Specify which contact lists you are adding all imported contacts\
@@ -921,7 +917,7 @@ paths:
         x-example: "not_set"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The CSV contact import activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityImport"
         "400":
@@ -1001,7 +997,7 @@ paths:
           $ref: "#/definitions/ContactsJsonImport"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The JSON contact import activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityImport"
         "400":
@@ -1054,7 +1050,7 @@ paths:
           $ref: "#/definitions/ListActivityRemoveContacts"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The remove-from-lists activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityListsMembership"
         "400":
@@ -1107,7 +1103,7 @@ paths:
           $ref: "#/definitions/ListActivityAddContacts"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The add-to-lists activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityListsMembership"
         "400":
@@ -1153,7 +1149,7 @@ paths:
           $ref: "#/definitions/ListIdList100"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The list delete activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityDeleteListsResponse"
         "400":
@@ -1208,7 +1204,7 @@ paths:
           $ref: "#/definitions/TagAddRemoveContacts"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The tag removal activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityTagging"
         "400":
@@ -1263,7 +1259,7 @@ paths:
           $ref: "#/definitions/TagAddRemoveContacts"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The tagging activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityTagging"
         "400":
@@ -1314,7 +1310,7 @@ paths:
           $ref: "#/definitions/TagIdList500Limit"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The tag delete activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityTagging"
         "400":
@@ -1360,7 +1356,7 @@ paths:
           $ref: "#/definitions/CustomFieldId100"
       responses:
         "201":
-          description: "Request successful. Activity queued for processing."
+          description: The custom field delete activity, queued for processing.
           schema:
             $ref: "#/definitions/ActivityDeleteCustomFields"
         "400":
@@ -1457,7 +1453,7 @@ paths:
         x-example: "7zDEe3DhD5gUiwRFsvWKKZlZO1j6-YihH2hyVWD8GaW7JnzXbHFP8Tou212KoU20mOjvM6pdWwycDWC3X-Hb_xY-RK1eBwYp_pc4X2CvLxo"
       responses:
         "200":
-          description: "Request Successful"
+          description: A page of events
           schema:
             $ref: "#/definitions/PaginationDtoEventListingDto"
         "400":
@@ -1570,7 +1566,7 @@ paths:
         x-example: true
       responses:
         "200":
-          description: "Request Successful"
+          description: The event details
           schema:
             $ref: "#/definitions/EventDto"
         "400":
@@ -1825,7 +1821,7 @@ paths:
         x-example: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
       responses:
         "200":
-          description: "Request Successful"
+          description: The registration details
           schema:
             $ref: "#/definitions/DetailedRegistrationDto"
         "400":
@@ -2138,7 +2134,7 @@ paths:
         x-example: "accessible"
       responses:
         "200":
-          description: "Request successful"
+          description: The social media profiles
           schema:
             $ref: "#/definitions/Profiles"
         "400":
@@ -2182,7 +2178,7 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Request successful"
+          description: The social network connections
           schema:
             $ref: "#/definitions/ConnectionResponseDto"
         "400":
@@ -2239,7 +2235,7 @@ paths:
         x-example: "0"
       responses:
         "200":
-          description: "Request successful"
+          description: A page of hashtag groups
           schema:
             $ref: "#/definitions/PagedHashtagGroupsDto"
         "400":
@@ -2289,7 +2285,7 @@ paths:
           $ref: "#/definitions/PostCreateDto"
       responses:
         "200":
-          description: "OK"
+          description: The created social media post
           schema:
             $ref: "#/definitions/PostDto"
         "201":
@@ -2348,7 +2344,7 @@ paths:
         x-example: "sort_by=date"
       responses:
         "200":
-          description: "Request successful."
+          description: The collection of segments
           schema:
             $ref: "#/definitions/SegmentsDTO"
         "400":
@@ -2687,7 +2683,7 @@ paths:
         x-example: "custom_fields,list_memberships"
       responses:
         "200":
-          description: "Request successful"
+          description: The requested contact
           schema:
             $ref: "#/definitions/ContactResource"
         "400":
@@ -2808,7 +2804,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "204":
-          description: "Request successful; No content returned"
+          description: The contact was deleted; no content is returned
         "400":
           description: "Bad request. Either the JSON was malformed or there was a\
             \ data validation error."
@@ -3012,11 +3008,11 @@ paths:
         x-example: 25
       responses:
         "200":
-          description: "Request successful"
+          description: The collection of contacts
           schema:
             $ref: "#/definitions/Contacts"
         "202":
-          description: "Accepted"
+          description: Request accepted; the contacts collection is being prepared
           schema:
             $ref: "#/definitions/Contacts"
         "400":
@@ -3221,7 +3217,7 @@ paths:
         x-example: "1995998026,1882999944,1775099999"
       responses:
         "200":
-          description: "Request successful"
+          description: The V2 to V3 contact ID cross-references
           schema:
             $ref: "#/definitions/ContactXrefs"
         "400":
@@ -3263,7 +3259,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "200":
-          description: "Request successful"
+          description: The requested custom field
           schema:
             $ref: "#/definitions/CustomField"
         "400":
@@ -3355,7 +3351,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "204":
-          description: "Request successful; No content returned"
+          description: The custom field was deleted; no content is returned
         "401":
           description: "The Access Token used is invalid."
         "403":
@@ -3399,7 +3395,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request successful"
+          description: The collection of custom fields
           schema:
             $ref: "#/definitions/CustomFields"
         "400":
@@ -3506,7 +3502,7 @@ paths:
         x-example: "all"
       responses:
         "200":
-          description: "Request successful"
+          description: The requested list
           schema:
             $ref: "#/definitions/ContactList"
         "401":
@@ -3553,7 +3549,7 @@ paths:
           $ref: "#/definitions/ListInput"
       responses:
         "200":
-          description: "Request successful"
+          description: The updated list
           schema:
             $ref: "#/definitions/ContactListPutPost"
         "400":
@@ -3602,7 +3598,7 @@ paths:
         x-example: "cbc05bac-6a41-46fa-a063-79961763bf4b"
       responses:
         "202":
-          description: "Accepted"
+          description: Request accepted; the list delete activity status
           headers:
             Location:
               type: "string"
@@ -3705,7 +3701,7 @@ paths:
         x-example: "false"
       responses:
         "200":
-          description: "Request successful"
+          description: The collection of lists
           schema:
             $ref: "#/definitions/ContactListArray"
         "400":
@@ -3806,7 +3802,7 @@ paths:
         x-example: "1995998026,1882999944,1775099999"
       responses:
         "200":
-          description: "Request successful"
+          description: The V2 to V3 list ID cross-references
           schema:
             $ref: "#/definitions/ListXrefs"
         "400":
@@ -3851,7 +3847,7 @@ paths:
         x-example: "04fe9a-a579-43c5-bb1a-58ed29bf0a6a"
       responses:
         "200":
-          description: "Request successful"
+          description: The SMS engagement history for the contact
           schema:
             $ref: "#/definitions/SmsEngagementHistory"
         "400":
@@ -3903,7 +3899,7 @@ paths:
         x-example: "new_subscriber"
       responses:
         "200":
-          description: "Request successful"
+          description: Contact counts by consent state
           schema:
             $ref: "#/definitions/ContactsCounts"
         "400":
@@ -4016,7 +4012,7 @@ paths:
         x-example: true
       responses:
         "200":
-          description: "Request Successful"
+          description: The requested tag
           schema:
             $ref: "#/definitions/Tag"
         "400":
@@ -4068,7 +4064,7 @@ paths:
           $ref: "#/definitions/TagPut"
       responses:
         "200":
-          description: "Request Successful"
+          description: The updated tag
           schema:
             $ref: "#/definitions/Tag"
         "400":
@@ -4180,7 +4176,7 @@ paths:
         x-example: true
       responses:
         "200":
-          description: "Request Successful"
+          description: The collection of tags
           schema:
             $ref: "#/definitions/Tags"
         "400":
@@ -4225,7 +4221,7 @@ paths:
           $ref: "#/definitions/TagPost"
       responses:
         "201":
-          description: "Request Successful"
+          description: The created tag
           schema:
             $ref: "#/definitions/Tag"
         "400":
@@ -4301,7 +4297,7 @@ paths:
         x-example: "2021-03-10T11:42:57.000Z"
       responses:
         "200":
-          description: "Request successful."
+          description: A page of email campaigns
           schema:
             $ref: "#/definitions/PagedEmailCampaignResponse"
         "400":
@@ -4353,9 +4349,7 @@ paths:
           $ref: "#/definitions/EmailCampaignComplete"
       responses:
         "200":
-          description: "Request successful. NOTE: If you created an email campaign\
-            \ using a legacy (V7) format, Constant Contact successfully converted\
-            \ it to the newer custom code format."
+          description: The created email campaign. A campaign created in the legacy (V7) format is converted to the custom code format.
           schema:
             $ref: "#/definitions/EmailCampaign"
         "400":
@@ -4453,7 +4447,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The requested email campaign
           schema:
             $ref: "#/definitions/EmailCampaign"
         "400":
@@ -4548,7 +4542,7 @@ paths:
           $ref: "#/definitions/EmailCampaignName"
       responses:
         "200":
-          description: "Request successful."
+          description: The renamed email campaign
           schema:
             $ref: "#/definitions/EmailCampaign"
         "400":
@@ -4612,7 +4606,7 @@ paths:
         x-example: "1100567546598,1604567396117,12002485195578"
       responses:
         "200":
-          description: "Request successful."
+          description: The V2 to V3 email campaign ID cross-references
           schema:
             $ref: "#/definitions/CrossReferenceResponse"
         "400":
@@ -4676,7 +4670,7 @@ paths:
         - "document_properties"
       responses:
         "200":
-          description: "Request successful."
+          description: The requested email campaign activity
           schema:
             $ref: "#/definitions/EmailCampaignActivity"
         "400":
@@ -4788,7 +4782,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The schedule for the email campaign activity
           schema:
             $ref: "#/definitions/EmailScheduleResponse"
         "400":
@@ -4855,7 +4849,7 @@ paths:
           $ref: "#/definitions/EmailScheduleInput"
       responses:
         "201":
-          description: "Request successful."
+          description: The created schedule
           schema:
             $ref: "#/definitions/EmailScheduleResponse"
         "400":
@@ -5011,7 +5005,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The HTML preview of the email campaign activity
           schema:
             $ref: "#/definitions/EmailCampaignActivityPreview"
         "400":
@@ -5065,7 +5059,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The send history of the email campaign activity
           schema:
             $ref: "#/definitions/EmailSendHistory"
         "400":
@@ -5113,7 +5107,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The resend to non-openers details
           schema:
             $ref: "#/definitions/ResendToNonOpeners"
         "400":
@@ -5173,7 +5167,7 @@ paths:
           $ref: "#/definitions/ResendToNonOpenersInput"
       responses:
         "201":
-          description: "Request successful."
+          description: The created resend to non-openers activity
           schema:
             $ref: "#/definitions/ResendToNonOpenersObject"
         "400":
@@ -5230,7 +5224,7 @@ paths:
         x-example: "389093"
       responses:
         "204":
-          description: "Request successful."
+          description: The resend to non-openers activity was deleted; no content is returned
         "400":
           description: "Bad request. Either the JSON was malformed or there was a\
             \ data validation error."
@@ -5306,7 +5300,7 @@ paths:
         x-example: "My Workflow 123"
       responses:
         "209":
-          description: "Request successful"
+          description: The collection of automations
           schema:
             $ref: "#/definitions/ListAutomationFlowsResponseDto"
         "400":
@@ -5356,7 +5350,7 @@ paths:
           $ref: "#/definitions/TriggerDefDto"
       responses:
         "201":
-          description: "Request successful"
+          description: The created automation
           schema:
             $ref: "#/definitions/AutomationCampaign"
         "400":
@@ -5396,7 +5390,7 @@ paths:
         type: "string"
       responses:
         "200":
-          description: "Request successful"
+          description: The requested automation
           schema:
             $ref: "#/definitions/AutomationCampaign"
         "400":
@@ -5441,7 +5435,7 @@ paths:
           $ref: "#/definitions/AutomationCampaignUpdate"
       responses:
         "200":
-          description: "Request successful"
+          description: The updated automation
           schema:
             $ref: "#/definitions/AutomationCampaign"
         "400":
@@ -5484,7 +5478,7 @@ paths:
         x-example: "91569d46-00e4-4a4d-9a4c-d17d98740d04"
       responses:
         "200":
-          description: "Request successful."
+          description: The A/B test details
           schema:
             $ref: "#/definitions/ABTestData"
         "400":
@@ -5545,7 +5539,7 @@ paths:
           $ref: "#/definitions/ABTestData"
       responses:
         "201":
-          description: "Request successful."
+          description: The created A/B test
           schema:
             $ref: "#/definitions/ABTestData"
         "400":
@@ -5711,7 +5705,7 @@ paths:
         x-example: "20"
       responses:
         "200":
-          description: "successful operation"
+          description: Activity details for the contact
           schema:
             $ref: "#/definitions/ContactTrackingActivitiesPage"
         "400":
@@ -5774,7 +5768,7 @@ paths:
         type: "string"
       responses:
         "200":
-          description: "Request Successful"
+          description: The contact's average open and click rates
           schema:
             $ref: "#/definitions/ContactOpenAndClickRates"
         "400":
@@ -5834,7 +5828,7 @@ paths:
         type: "string"
       responses:
         "200":
-          description: "successful operation"
+          description: Summary of activity counts for the contact
           schema:
             $ref: "#/definitions/ContactCampaignActivitiesSummary"
         "400":
@@ -5894,7 +5888,7 @@ paths:
         x-example: "true"
       responses:
         "200":
-          description: "Request was successful"
+          description: The email links report
           schema:
             $ref: "#/definitions/EmailLinks"
         "400":
@@ -5955,7 +5949,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email send tracking activities
           schema:
             $ref: "#/definitions/SendsTrackingActivitiesPage"
         "400":
@@ -6016,7 +6010,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email open tracking activities
           schema:
             $ref: "#/definitions/OpensTrackingActivitiesPage"
         "400":
@@ -6078,7 +6072,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of unique email open tracking activities
           schema:
             $ref: "#/definitions/OpensTrackingActivitiesPage"
         "400":
@@ -6139,7 +6133,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of contacts who did not open the email
           schema:
             $ref: "#/definitions/DidNotOpensTrackingActivitiesPage"
         "400":
@@ -6205,7 +6199,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email click tracking activities
           schema:
             $ref: "#/definitions/ClicksTrackingActivitiesPage"
         "400":
@@ -6265,7 +6259,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email forward tracking activities
           schema:
             $ref: "#/definitions/ForwardsTrackingActivitiesPage"
         "400":
@@ -6325,7 +6319,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email opt-out tracking activities
           schema:
             $ref: "#/definitions/OptoutsTrackingActivitiesPage"
         "400":
@@ -6404,7 +6398,7 @@ paths:
         minimum: 1
       responses:
         "200":
-          description: "Request was successful"
+          description: A page of email bounce tracking activities
           schema:
             $ref: "#/definitions/BouncesTrackingActivitiesPage"
         "400":
@@ -6465,7 +6459,7 @@ paths:
         default: "adjusted_timestamp"
       responses:
         "200":
-          description: "Request was successful"
+          description: The campaign performance statistics
           schema:
             $ref: "#/definitions/CampaignPerformanceStatsQueryResult"
         "400":
@@ -6523,7 +6517,7 @@ paths:
         x-example: "100"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of email campaign summaries
           schema:
             $ref: "#/definitions/BulkEmailCampaignSummariesPage"
         "400":
@@ -6574,7 +6568,7 @@ paths:
         x-example: "82ee2c37-c8f8-4974-9560-ef93ad51d58z"
       responses:
         "200":
-          description: "Request was successful."
+          description: The statistics for the email campaigns
           schema:
             $ref: "#/definitions/CampaignStatsQueryResultEmail"
         "400":
@@ -6628,7 +6622,7 @@ paths:
         x-example: "82ee2c37-c8f8-4974-9560-ef93ad51d58z"
       responses:
         "200":
-          description: "Request was successful."
+          description: The statistics for the email campaign activities
           schema:
             $ref: "#/definitions/CampaignActivityStatsQueryResultEmail"
         "400":
@@ -6693,7 +6687,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of unique contact clicks on the landing page
           schema:
             $ref: "#/definitions/PContactClickTrackingActivitiesPage"
         "400":
@@ -6758,7 +6752,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of unique contact opens of the landing page
           schema:
             $ref: "#/definitions/PContactOpensTrackingActivitiesPage"
         "400":
@@ -6823,7 +6817,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of contact opens of the landing page
           schema:
             $ref: "#/definitions/PContactOpensTrackingActivitiesPage"
         "400":
@@ -6889,7 +6883,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of unique contact updates from the landing page
           schema:
             $ref: "#/definitions/PContactUpdateTrackingActivitiesPage"
         "400":
@@ -6954,7 +6948,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of unique contacts added from the landing page
           schema:
             $ref: "#/definitions/PContactAddTrackingActivitiesPage"
         "400":
@@ -7019,7 +7013,7 @@ paths:
         x-example: "Jo"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of unique contact SMS opt-ins from the landing page
           schema:
             $ref: "#/definitions/PContactSMSOptInTrackingActivitiesPage"
         "400":
@@ -7088,7 +7082,7 @@ paths:
         x-example: "2024-01-27T21:56:37.011Z"
       responses:
         "200":
-          description: "Request was successful."
+          description: A page of SMS campaign summaries
           schema:
             $ref: "#/definitions/SmsCampaignSummariesPage"
         "400":
@@ -7164,7 +7158,7 @@ paths:
         x-example: "managed"
       responses:
         "200":
-          description: "Request successful."
+          description: The partner client accounts
           schema:
             $ref: "#/definitions/PartnerAccount"
         "400":
@@ -7220,7 +7214,7 @@ paths:
           $ref: "#/definitions/Provision"
       responses:
         "201":
-          description: "Request successful."
+          description: The provisioned client account
           schema:
             $ref: "#/definitions/ProvisionResponse"
         "400":
@@ -7273,7 +7267,7 @@ paths:
         x-example: "a07e1lxqqqo0"
       responses:
         "200":
-          description: "Request successful."
+          description: The billing plan for the client account
           schema:
             $ref: "#/definitions/PlanTiersObject"
         "400":
@@ -7354,7 +7348,7 @@ paths:
           $ref: "#/definitions/PlanInfo"
       responses:
         "200":
-          description: "Request successful."
+          description: The updated billing plan
           schema:
             $ref: "#/definitions/PlanTiersObject"
         "400":
@@ -7416,7 +7410,7 @@ paths:
           $ref: "#/definitions/AccountCancellation"
       responses:
         "200":
-          description: "Request successful"
+          description: The billing plan cancellation details
           schema:
             $ref: "#/definitions/AccountCancellation"
         "400":
@@ -7469,9 +7463,7 @@ paths:
           $ref: "#/definitions/PartnerAccountOperationsRequest"
       responses:
         "200":
-          description: "Request successful. The response body schema returned by this\
-            \ method corresponds to the specific API request you provided in the request\
-            \ body."
+          description: The response to the proxied request; its schema depends on the API request sent in the body.
         "400":
           description: "Bad request. Either the JSON was malformed or there was a\
             \ data validation error."
@@ -7521,7 +7513,7 @@ paths:
           $ref: "#/definitions/SSOUser"
       responses:
         "201":
-          description: "Request successful."
+          description: The SSO user was created under the client account
         "400":
           description: "Bad request. Either the JSON was malformed or there was a\
             \ data validation error."
@@ -7641,7 +7633,7 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Request successful"
+          description: The webhook topic subscriptions
           schema:
             $ref: "#/definitions/WebhooksSubscriptionCollection"
         "400":
@@ -7683,7 +7675,7 @@ paths:
         x-example: "1"
       responses:
         "200":
-          description: "Request successful"
+          description: The webhook topic subscription
           schema:
             $ref: "#/definitions/WebhooksSubscriptionResponse"
         "400":
@@ -7739,7 +7731,7 @@ paths:
           $ref: "#/definitions/WebhooksSubscriptionBody"
       responses:
         "200":
-          description: "Request successful."
+          description: The updated webhook topic subscription
           schema:
             $ref: "#/definitions/WebhooksSubscriptionPutResp"
         "400":
@@ -7870,6 +7862,7 @@ securityDefinitions:
     scopes:
       v3api/general.partner: "Access to general partner API methods"
   api_key:
+    description: "API key issued for the application, sent in the x-api-key header"
     type: "apiKey"
     name: "x-api-key"
     in: "header"
@@ -8820,11 +8813,7 @@ definitions:
       confirm_status:
         type: "string"
         example: "UNCONFIRMED"
-        description: "The confirmation status of the account email address. When you\
-          \ add a new email address to an account, Constant Contact automatically\
-          \ sends an email to that address with a link to confirm it. You can use\
-          \ any account email address with a <code>CONFIRMED</code> status to create\
-          \ an email campaign.\n"
+        description: "The confirmation status of the account email address. When you add a new email address to an account, Constant Contact automatically sends an email to that address with a link to confirm it. You can use any account email address with a <code>CONFIRMED</code> status to create an email campaign.\n"
   TierObject:
     type: "object"
     properties:
@@ -13284,10 +13273,7 @@ definitions:
       anniversary:
         type: "string"
         example: "11-15-2006"
-        description: "The anniversary date for the contact. For example, this value\
-          \ could be the date when the contact first became a customer of an organization\
-          \ in Constant Contact. Valid date formats are MM/DD/YYYY, M/D/YYYY, YYYY/MM/DD,\
-          \ YYYY/M/D, YYYY-MM-DD, YYYY-M-D,M-D-YYYY, or M-DD-YYYY.\n"
+        description: "The anniversary date for the contact. For example, this value could be the date when the contact first became a customer of an organization in Constant Contact. Valid date formats are MM/DD/YYYY, M/D/YYYY, YYYY/MM/DD, YYYY/M/D, YYYY-MM-DD, YYYY-M-D,M-D-YYYY, or M-DD-YYYY.\n"
       birthday_month:
         type: "integer"
         example: 11
@@ -14231,9 +14217,7 @@ definitions:
         type: "integer"
         format: "int32"
         example: 5
-        description: "The email format you are using to create the email campaign\
-          \ activity. The V3 API supports creating emails using <code>format_type</code>\
-          \ 4 (email editor) and 5 (custom code emails).\n"
+        description: "The email format you are using to create the email campaign activity. The V3 API supports creating emails using <code>format_type</code> 4 (email editor) and 5 (custom code emails).\n"
       from_name:
         type: "string"
         example: "Jake Dodge"
@@ -14272,11 +14256,7 @@ definitions:
         type: "string"
         example: "<html><body>[[trackingImage]] <a href=\"http://www.constantcontact.com\"\
           >Visit ConstantContact.com!</a> </body></html>"
-        description: "The HTML content for the email campaign activity. Only <code>format_type</code>\
-          \ 5 (custom code emails) can contain <code>html_content</code>. When creating\
-          \ a <code>format_type</code> 5 custom code email, make sure that you include\
-          \ <code>[[trackingImage]]</code> in the <code>&lt;body&gt;</code> element\
-          \ of your HTML.\n"
+        description: "The HTML content for the email campaign activity. Only <code>format_type</code> 5 (custom code emails) can contain <code>html_content</code>. When creating a <code>format_type</code> 5 custom code email, make sure that you include <code>[[trackingImage]]</code> in the <code>&lt;body&gt;</code> element of your HTML.\n"
         maxLength: 150000
       physical_address_in_footer:
         description: "The physical address for the organization that is sending the\
@@ -14313,17 +14293,7 @@ definitions:
       role:
         type: "string"
         example: "primary_email"
-        description: "The purpose of the individual campaign activity in the larger\
-          \ email campaign effort. Valid values are: <ul>\n  <li>primary_email — The\
-          \ main email marketing campaign that you send to contacts. The <code>primary_email</code>\
-          \ contains the complete email content.</li>\n  <li>permalink — A permanent\
-          \ link to a web accessible version of the <code>primary_email</code> content\
-          \ without any personalized email information. For example, permalinks do\
-          \ not contain any of the contact details that you add to the <code>primary_email</code>\
-          \ email content. </li>\n  <li>resend — An email campaign that you resend\
-          \ to contacts that did not open the email campaign.</li>\n</ul> Constant\
-          \ Contact creates a <code>primary_email</code> and a <code>permalink</code>\
-          \ role campaign activity when you create an email campaign.\n"
+        description: "The purpose of the individual campaign activity in the larger email campaign effort. Valid values are: <ul>\n  <li>primary_email — The main email marketing campaign that you send to contacts. The <code>primary_email</code> contains the complete email content.</li>\n  <li>permalink — A permanent link to a web accessible version of the <code>primary_email</code> content without any personalized email information. For example, permalinks do not contain any of the contact details that you add to the <code>primary_email</code> email content. </li>\n  <li>resend — An email campaign that you resend to contacts that did not open the email campaign.</li>\n</ul> Constant Contact creates a <code>primary_email</code> and a <code>permalink</code> role campaign activity when you create an email campaign.\n"
       document_id:
         type: "string"
         example: "21babb03-8385-4739-b9cc-n6cce44633a7"
@@ -14460,17 +14430,7 @@ definitions:
       role:
         type: "string"
         example: "primary_email"
-        description: "The purpose of the individual campaign activity in the larger\
-          \ email campaign effort. Valid values are: <ul>\n  <li>primary_email — The\
-          \ main email marketing campaign that you send to contacts. The <code>primary_email</code>\
-          \ contains the complete email content.</li>\n  <li>permalink — A permanent\
-          \ link to a web accessible version of the <code>primary_email</code> content\
-          \ without any personalized email information. For example, permalinks do\
-          \ not contain any of the contact details that you add to the <code>primary_email</code>\
-          \ email content. </li>\n  <li>resend — An email campaign that you resend\
-          \ to contacts that did not open the email campaign.</li>\n</ul> Constant\
-          \ Contact creates a <code>primary_email</code> and a <code>permalink</code>\
-          \ role campaign activity when you create an email campaign.\n"
+        description: "The purpose of the individual campaign activity in the larger email campaign effort. Valid values are: <ul>\n  <li>primary_email — The main email marketing campaign that you send to contacts. The <code>primary_email</code> contains the complete email content.</li>\n  <li>permalink — A permanent link to a web accessible version of the <code>primary_email</code> content without any personalized email information. For example, permalinks do not contain any of the contact details that you add to the <code>primary_email</code> email content. </li>\n  <li>resend — An email campaign that you resend to contacts that did not open the email campaign.</li>\n</ul> Constant Contact creates a <code>primary_email</code> and a <code>permalink</code> role campaign activity when you create an email campaign.\n"
         readOnly: true
       contact_list_ids:
         type: "array"

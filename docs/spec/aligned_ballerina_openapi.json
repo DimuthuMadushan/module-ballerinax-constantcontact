@@ -10593,12 +10593,12 @@
                         "explode": true,
                         "schema": {
                             "type": "string",
-                            "default": "all",
                             "enum": [
                                 "all",
                                 "managed",
                                 "unmanaged"
-                            ]
+                            ],
+                            "default": "all"
                         },
                         "example": "managed",
                         "x-ballerina-name": "accountType"
@@ -24702,10 +24702,10 @@
             },
             "api_key": {
                 "type": "apiKey",
+                "description": "API key issued for the application, sent in the x-api-key header",
                 "name": "x-api-key",
                 "in": "header",
-                "x-ballerina-name": "xApiKey",
-                "description": "API key issued for the application, sent in the x-api-key header"
+                "x-ballerina-name": "xApiKey"
             }
         }
     },

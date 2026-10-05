@@ -1,6 +1,6 @@
 _Author_:  Dimuthu Madushan \
 _Created_: 2026/09/30 \
-_Updated_: 2026/09/30 \
+_Updated_: 2026/10/05 \
 _Edition_: Swan Lake
 
 # Sanitation for OpenAPI specification
@@ -15,7 +15,7 @@ These changes are done in order to improve the overall usability, and as workaro
 
 2. **Removed the binary `example` on the `file` property of the contact CSV import body**
 
-   `flatten` emitted the source's `x-example` as a YAML `!!binary` value, which cannot be serialized to JSON. The `example` was dropped from `ActivitiesContactsFileImportBody.file`.
+   `flatten` emitted the source's `x-example` as a YAML `!!binary` value, which cannot be serialized to JSON. The `x-example` was removed from the `file` form parameter of `POST /activities/contacts_file_import` in `docs/spec/openapi.yaml`.
 
 3. **Stable operation IDs**
 
@@ -23,7 +23,7 @@ These changes are done in order to improve the overall usability, and as workaro
 
 4. **Descriptions for generic success responses**
 
-   103 success responses on 98 operations were described only as `Request successful`, `Request was successful`, `OK`, `Accepted` or `successful operation`. These descriptions become the `# + return` documentation of the client methods, so they were rewritten in the aligned spec (`aligned_ballerina_openapi.json`) to describe what is returned. Details the originals carried, such as `queued for processing` on the bulk activity endpoints and the legacy (V7) conversion note on `createEmailCampaign`, were kept. `openapi.yaml` is unchanged, so these edits must be re-applied to the aligned spec whenever it is regenerated.
+   103 success responses on 98 operations were described only as `Request successful`, `Request was successful`, `OK`, `Accepted` or `successful operation`. These descriptions become the `# + return` documentation of the client methods, so they were rewritten in `docs/spec/openapi.yaml` to describe what is returned. Details the originals carried, such as `queued for processing` on the bulk activity endpoints and the legacy (V7) conversion note on `createEmailCampaign`, were kept.
 
    <details>
    <summary>Rewritten descriptions</summary>
@@ -153,6 +153,14 @@ These changes are done in order to improve the overall usability, and as workaro
    ```
 
    `file` is now sent as a file part with its name, and the wire names `sms_permission_to_send` and `list_ids` are kept. When `smsPermissionToSend` is not set, no part is sent for it. This is a change to generated code, not to the spec, so it must be re-applied to `client.bal` whenever the client is regenerated.
+
+7. **Description for the `api_key` security definition**
+
+   The `api_key` entry in `securityDefinitions` had no description. `API key issued for the application, sent in the x-api-key header` was added in `docs/spec/openapi.yaml`; it becomes the documentation of the `xApiKey` field of the connection config.
+
+8. **Description for the contact CSV import request body**
+
+   A Swagger 2.0 `formData` operation has no place for a request body description, so `CSV file and import options for bulk contact import` is added to the generated `requestBody` of `POST /activities/contacts_file_import` in the aligned spec by the generation pipeline (a description-fill step). It is re-created whenever the pipeline is run.
 
 ## OpenAPI cli command
 

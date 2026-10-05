@@ -77,7 +77,7 @@ paths:
       operationId: getUserPrivileges
       responses:
         "200":
-          description: Request successful.
+          description: The privileges granted to the user
           content:
             application/json:
               schema:
@@ -122,7 +122,7 @@ paths:
         example: company_logo
       responses:
         "200":
-          description: Request successful
+          description: The account summary details
           content:
             application/json:
               schema:
@@ -173,7 +173,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful
+          description: The updated account details
           content:
             application/json:
               schema:
@@ -215,7 +215,7 @@ paths:
       operationId: getPhysicalAddress
       responses:
         "200":
-          description: Request successful
+          description: The physical address for the account
           content:
             application/json:
               schema:
@@ -277,7 +277,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful
+          description: The updated physical address
           content:
             application/json:
               schema:
@@ -336,7 +336,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful
+          description: The created physical address
           content:
             application/json:
               schema:
@@ -385,7 +385,7 @@ paths:
       operationId: getCompanyLogo
       responses:
         "200":
-          description: Request successful
+          description: The company logo for the account
           content:
             application/json:
               schema:
@@ -440,7 +440,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful
+          description: The updated company logo
           content:
             application/json:
               schema:
@@ -526,7 +526,7 @@ paths:
           type: string
       responses:
         "200":
-          description: Request successful.
+          description: The account email addresses
           content:
             application/json:
               schema:
@@ -584,7 +584,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The added account email address
           content:
             application/json:
               schema:
@@ -659,7 +659,7 @@ paths:
         example: processing
       responses:
         "200":
-          description: Request Successful
+          description: The collection of activity statuses
           content:
             application/json:
               schema:
@@ -709,7 +709,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "200":
-          description: Request Successful
+          description: The status of the activity
           content:
             application/json:
               schema:
@@ -763,7 +763,7 @@ paths:
         required: true
       responses:
         "201":
-          description: "Request successful, queued for processing."
+          description: "The contact export activity, queued for processing."
           content:
             application/json:
               schema:
@@ -821,7 +821,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "200":
-          description: Request Successful
+          description: The exported contacts file
           content:
             text/csv:
               schema:
@@ -881,7 +881,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The bulk contact delete activity, queued for processing."
           content:
             application/json:
               schema:
@@ -947,7 +947,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The CSV contact import activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1033,7 +1033,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The JSON contact import activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1091,7 +1091,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The remove-from-lists activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1149,7 +1149,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The add-to-lists activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1200,7 +1200,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The list delete activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1255,7 +1255,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The tag removal activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1313,7 +1313,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The tagging activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1370,7 +1370,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The tag delete activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1421,7 +1421,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful. Activity queued for processing.
+          description: "The custom field delete activity, queued for processing."
           content:
             application/json:
               schema:
@@ -1526,7 +1526,7 @@ paths:
         example: 7zDEe3DhD5gUiwRFsvWKKZlZO1j6-YihH2hyVWD8GaW7JnzXbHFP8Tou212KoU20mOjvM6pdWwycDWC3X-Hb_xY-RK1eBwYp_pc4X2CvLxo
       responses:
         "200":
-          description: Request Successful
+          description: A page of events
           content:
             application/json:
               schema:
@@ -1647,7 +1647,7 @@ paths:
         example: true
       responses:
         "200":
-          description: Request Successful
+          description: The event details
           content:
             application/json:
               schema:
@@ -1934,7 +1934,7 @@ paths:
         example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
       responses:
         "200":
-          description: Request Successful
+          description: The registration details
           content:
             application/json:
               schema:
@@ -2272,7 +2272,7 @@ paths:
         example: accessible
       responses:
         "200":
-          description: Request successful
+          description: The social media profiles
           content:
             application/json:
               schema:
@@ -2316,7 +2316,7 @@ paths:
       operationId: getSocialConnectionsUsingGET
       responses:
         "200":
-          description: Request successful
+          description: The social network connections
           content:
             application/json:
               schema:
@@ -2377,7 +2377,7 @@ paths:
         example: "0"
       responses:
         "200":
-          description: Request successful
+          description: A page of hashtag groups
           content:
             application/json:
               schema:
@@ -2428,7 +2428,7 @@ paths:
         required: true
       responses:
         "200":
-          description: OK
+          description: The created social media post
           content:
             application/json:
               schema:
@@ -2495,7 +2495,7 @@ paths:
         example: sort_by=date
       responses:
         "200":
-          description: Request successful.
+          description: The collection of segments
           content:
             application/json:
               schema:
@@ -2868,7 +2868,7 @@ paths:
         example: "custom_fields,list_memberships"
       responses:
         "200":
-          description: Request successful
+          description: The requested contact
           content:
             application/json:
               schema:
@@ -3002,7 +3002,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "204":
-          description: Request successful; No content returned
+          description: The contact was deleted; no content is returned
           content: {}
         "400":
           description: Bad request. Either the JSON was malformed or there was a data
@@ -3205,13 +3205,13 @@ paths:
         example: 25
       responses:
         "200":
-          description: Request successful
+          description: The collection of contacts
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Contacts"
         "202":
-          description: Accepted
+          description: Request accepted; the contacts collection is being prepared
           content:
             application/json:
               schema:
@@ -3419,7 +3419,7 @@ paths:
         example: "1995998026,1882999944,1775099999"
       responses:
         "200":
-          description: Request successful
+          description: The V2 to V3 contact ID cross-references
           content:
             application/json:
               schema:
@@ -3468,7 +3468,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "200":
-          description: Request successful
+          description: The requested custom field
           content:
             application/json:
               schema:
@@ -3574,7 +3574,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "204":
-          description: Request successful; No content returned
+          description: The custom field was deleted; no content is returned
           content: {}
         "401":
           description: The Access Token used is invalid.
@@ -3623,7 +3623,7 @@ paths:
           default: 50
       responses:
         "200":
-          description: Request successful
+          description: The collection of custom fields
           content:
             application/json:
               schema:
@@ -3742,7 +3742,7 @@ paths:
         example: all
       responses:
         "200":
-          description: Request successful
+          description: The requested list
           content:
             application/json:
               schema:
@@ -3794,7 +3794,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful
+          description: The updated list
           content:
             application/json:
               schema:
@@ -3849,7 +3849,7 @@ paths:
         example: cbc05bac-6a41-46fa-a063-79961763bf4b
       responses:
         "202":
-          description: Accepted
+          description: Request accepted; the list delete activity status
           headers:
             Location:
               description: URL to retrieve the delete activity status
@@ -3959,7 +3959,7 @@ paths:
         example: "false"
       responses:
         "200":
-          description: Request successful
+          description: The collection of lists
           content:
             application/json:
               schema:
@@ -4062,7 +4062,7 @@ paths:
         example: "1995998026,1882999944,1775099999"
       responses:
         "200":
-          description: Request successful
+          description: The V2 to V3 list ID cross-references
           content:
             application/json:
               schema:
@@ -4112,7 +4112,7 @@ paths:
         example: 04fe9a-a579-43c5-bb1a-58ed29bf0a6a
       responses:
         "200":
-          description: Request successful
+          description: The SMS engagement history for the contact
           content:
             application/json:
               schema:
@@ -4168,7 +4168,7 @@ paths:
         example: new_subscriber
       responses:
         "200":
-          description: Request successful
+          description: Contact counts by consent state
           content:
             application/json:
               schema:
@@ -4293,7 +4293,7 @@ paths:
         example: true
       responses:
         "200":
-          description: Request Successful
+          description: The requested tag
           content:
             application/json:
               schema:
@@ -4350,7 +4350,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request Successful
+          description: The updated tag
           content:
             application/json:
               schema:
@@ -4470,7 +4470,7 @@ paths:
         example: true
       responses:
         "200":
-          description: Request Successful
+          description: The collection of tags
           content:
             application/json:
               schema:
@@ -4518,7 +4518,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request Successful
+          description: The created tag
           content:
             application/json:
               schema:
@@ -4594,7 +4594,7 @@ paths:
         example: 2021-03-10T11:42:57.000Z
       responses:
         "200":
-          description: Request successful.
+          description: A page of email campaigns
           content:
             application/json:
               schema:
@@ -4644,9 +4644,8 @@ paths:
         required: true
       responses:
         "200":
-          description: "Request successful. NOTE: If you created an email campaign\
-            \ using a legacy (V7) format, Constant Contact successfully converted\
-            \ it to the newer custom code format."
+          description: The created email campaign. A campaign created in the legacy
+            (V7) format is converted to the custom code format.
           content:
             application/json:
               schema:
@@ -4713,7 +4712,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The requested email campaign
           content:
             application/json:
               schema:
@@ -4820,7 +4819,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful.
+          description: The renamed email campaign
           content:
             application/json:
               schema:
@@ -4884,7 +4883,7 @@ paths:
         example: "1100567546598,1604567396117,12002485195578"
       responses:
         "200":
-          description: Request successful.
+          description: The V2 to V3 email campaign ID cross-references
           content:
             application/json:
               schema:
@@ -4949,7 +4948,7 @@ paths:
           - document_properties
       responses:
         "200":
-          description: Request successful.
+          description: The requested email campaign activity
           content:
             application/json:
               schema:
@@ -5070,7 +5069,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The schedule for the email campaign activity
           content:
             application/json:
               schema:
@@ -5144,7 +5143,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The created schedule
           content:
             application/json:
               schema:
@@ -5314,7 +5313,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The HTML preview of the email campaign activity
           content:
             application/json:
               schema:
@@ -5374,7 +5373,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The send history of the email campaign activity
           content:
             application/json:
               schema:
@@ -5427,7 +5426,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The resend to non-openers details
           content:
             application/json:
               schema:
@@ -5493,7 +5492,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The created resend to non-openers activity
           content:
             application/json:
               schema:
@@ -5558,7 +5557,8 @@ paths:
         example: "389093"
       responses:
         "204":
-          description: Request successful.
+          description: The resend to non-openers activity was deleted; no content
+            is returned
           content: {}
         "400":
           description: Bad request. Either the JSON was malformed or there was a data
@@ -5639,7 +5639,7 @@ paths:
         example: My Workflow 123
       responses:
         "209":
-          description: Request successful
+          description: The collection of automations
           content:
             application/json:
               schema:
@@ -5691,7 +5691,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful
+          description: The created automation
           content:
             application/json:
               schema:
@@ -5735,7 +5735,7 @@ paths:
           type: string
       responses:
         "200":
-          description: Request successful
+          description: The requested automation
           content:
             application/json:
               schema:
@@ -5784,7 +5784,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful
+          description: The updated automation
           content:
             application/json:
               schema:
@@ -5831,7 +5831,7 @@ paths:
         example: 91569d46-00e4-4a4d-9a4c-d17d98740d04
       responses:
         "200":
-          description: Request successful.
+          description: The A/B test details
           content:
             application/json:
               schema:
@@ -5899,7 +5899,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The created A/B test
           content:
             application/json:
               schema:
@@ -6062,7 +6062,7 @@ paths:
         example: "20"
       responses:
         "200":
-          description: successful operation
+          description: Activity details for the contact
           content:
             application/json:
               schema:
@@ -6132,7 +6132,7 @@ paths:
           type: string
       responses:
         "200":
-          description: Request Successful
+          description: The contact's average open and click rates
           content:
             application/json:
               schema:
@@ -6199,7 +6199,7 @@ paths:
           type: string
       responses:
         "200":
-          description: successful operation
+          description: Summary of activity counts for the contact
           content:
             application/json:
               schema:
@@ -6261,7 +6261,7 @@ paths:
         example: "true"
       responses:
         "200":
-          description: Request was successful
+          description: The email links report
           content:
             application/json:
               schema:
@@ -6327,7 +6327,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email send tracking activities
           content:
             application/json:
               schema:
@@ -6393,7 +6393,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email open tracking activities
           content:
             application/json:
               schema:
@@ -6460,7 +6460,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of unique email open tracking activities
           content:
             application/json:
               schema:
@@ -6526,7 +6526,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of contacts who did not open the email
           content:
             application/json:
               schema:
@@ -6597,7 +6597,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email click tracking activities
           content:
             application/json:
               schema:
@@ -6662,7 +6662,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email forward tracking activities
           content:
             application/json:
               schema:
@@ -6727,7 +6727,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email opt-out tracking activities
           content:
             application/json:
               schema:
@@ -6810,7 +6810,7 @@ paths:
           default: "500"
       responses:
         "200":
-          description: Request was successful
+          description: A page of email bounce tracking activities
           content:
             application/json:
               schema:
@@ -6875,7 +6875,7 @@ paths:
           default: adjusted_timestamp
       responses:
         "200":
-          description: Request was successful
+          description: The campaign performance statistics
           content:
             application/json:
               schema:
@@ -6937,7 +6937,7 @@ paths:
         example: "100"
       responses:
         "200":
-          description: Request was successful.
+          description: A page of email campaign summaries
           content:
             application/json:
               schema:
@@ -6989,7 +6989,7 @@ paths:
         example: 82ee2c37-c8f8-4974-9560-ef93ad51d58z
       responses:
         "200":
-          description: Request was successful.
+          description: The statistics for the email campaigns
           content:
             application/json:
               schema:
@@ -7042,7 +7042,7 @@ paths:
         example: 82ee2c37-c8f8-4974-9560-ef93ad51d58z
       responses:
         "200":
-          description: Request was successful.
+          description: The statistics for the email campaign activities
           content:
             application/json:
               schema:
@@ -7111,7 +7111,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of unique contact clicks on the landing page
           content:
             application/json:
               schema:
@@ -7181,7 +7181,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of unique contact opens of the landing page
           content:
             application/json:
               schema:
@@ -7251,7 +7251,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of contact opens of the landing page
           content:
             application/json:
               schema:
@@ -7322,7 +7322,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of unique contact updates from the landing page
           content:
             application/json:
               schema:
@@ -7392,7 +7392,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of unique contacts added from the landing page
           content:
             application/json:
               schema:
@@ -7462,7 +7462,7 @@ paths:
         example: Jo
       responses:
         "200":
-          description: Request was successful.
+          description: A page of unique contact SMS opt-ins from the landing page
           content:
             application/json:
               schema:
@@ -7536,7 +7536,7 @@ paths:
         example: 2024-01-27T21:56:37.011Z
       responses:
         "200":
-          description: Request was successful.
+          description: A page of SMS campaign summaries
           content:
             application/json:
               schema:
@@ -7613,7 +7613,7 @@ paths:
         example: managed
       responses:
         "200":
-          description: Request successful.
+          description: The partner client accounts
           content:
             application/json:
               schema:
@@ -7671,7 +7671,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The provisioned client account
           content:
             application/json:
               schema:
@@ -7728,7 +7728,7 @@ paths:
         example: a07e1lxqqqo0
       responses:
         "200":
-          description: Request successful.
+          description: The billing plan for the client account
           content:
             application/json:
               schema:
@@ -7801,7 +7801,7 @@ paths:
         required: false
       responses:
         "200":
-          description: Request successful.
+          description: The updated billing plan
           content:
             application/json:
               schema:
@@ -7869,7 +7869,7 @@ paths:
         required: false
       responses:
         "200":
-          description: Request successful
+          description: The billing plan cancellation details
           content:
             application/json:
               schema:
@@ -7925,9 +7925,8 @@ paths:
         required: false
       responses:
         "200":
-          description: Request successful. The response body schema returned by this
-            method corresponds to the specific API request you provided in the request
-            body.
+          description: The response to the proxied request; its schema depends on
+            the API request sent in the body.
           content: {}
         "400":
           description: Bad request. Either the JSON was malformed or there was a data
@@ -7982,7 +7981,7 @@ paths:
         required: true
       responses:
         "201":
-          description: Request successful.
+          description: The SSO user was created under the client account
           content: {}
         "400":
           description: Bad request. Either the JSON was malformed or there was a data
@@ -8073,7 +8072,7 @@ paths:
       operationId: getWebhooksCollection
       responses:
         "200":
-          description: Request successful
+          description: The webhook topic subscriptions
           content:
             application/json:
               schema:
@@ -8122,7 +8121,7 @@ paths:
         example: "1"
       responses:
         "200":
-          description: Request successful
+          description: The webhook topic subscription
           content:
             application/json:
               schema:
@@ -8188,7 +8187,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Request successful.
+          description: The updated webhook topic subscription
           content:
             application/json:
               schema:
@@ -17547,7 +17546,6 @@ components:
             \ dates or strings as the value of the custom field. Each contact can\
             \ contain up to 25 different custom fields."
           format: binary
-          example: new_contacts_import.csv
         list_ids:
           maxItems: 50
           type: string
@@ -19099,6 +19097,7 @@ components:
             v3api/general.partner: Access to general partner API methods
     api_key:
       type: apiKey
+      description: "API key issued for the application, sent in the x-api-key header"
       name: x-api-key
       in: header
 x-original-swagger-version: "2.0"
